@@ -26,6 +26,10 @@ public class telaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        selecioneHorario = new javax.swing.JComboBox<>();
+        horarioDisponivel = new javax.swing.JTextField();
+        ok = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -34,10 +38,38 @@ public class telaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        selecioneHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "14:00", "18:00", "20:00" }));
+        selecioneHorario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selecioneHorarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(selecioneHorario);
+        selecioneHorario.setBounds(210, 220, 110, 30);
+
+        horarioDisponivel.setEditable(false);
+        horarioDisponivel.setText("Horários disponíveis para agendamento");
+        horarioDisponivel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                horarioDisponivelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(horarioDisponivel);
+        horarioDisponivel.setBounds(210, 160, 240, 40);
+
+        ok.setText("Ok");
+        ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ok);
+        ok.setBounds(210, 270, 73, 23);
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\b8fb8ddcef8446e836cb6d7ce4b24fe6.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 630, 410);
+        jLabel1.setBounds(-10, -20, 630, 410);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -49,6 +81,19 @@ public class telaPrincipal extends javax.swing.JFrame {
 
         setBounds(0, 0, 645, 473);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void selecioneHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecioneHorarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selecioneHorarioActionPerformed
+
+    private void horarioDisponivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioDisponivelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_horarioDisponivelActionPerformed
+
+    private void okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okActionPerformed
+        agendamentoSucesso tela = new agendamentoSucesso();
+        tela.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_okActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,9 +131,13 @@ public class telaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField horarioDisponivel;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JButton ok;
+    private javax.swing.JComboBox<String> selecioneHorario;
     // End of variables declaration//GEN-END:variables
 }
